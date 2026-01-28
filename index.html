@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paygress | Decentralized Cloud Compute</title>
     <meta name="description" content="Non-KYC, Lightning-powered VPS provisioning network.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -40,24 +44,35 @@
         }
     </script>
     <style>
-        body { background-color: #050505; color: #e5e5e5; }
+        body {
+            background-color: #050505;
+            color: #e5e5e5;
+        }
+
         .gradient-text {
             background: linear-gradient(to right, #F7931A, #ffb347);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .terminal-cursor::after {
             content: '▋';
             animation: blink 1s step-start infinite;
             color: #F7931A;
         }
-        @keyframes blink { 50% { opacity: 0; } }
-        
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
         /* Grid Pattern Background */
         .bg-grid {
             background-size: 40px 40px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         }
 
         /* Meteor Shower Effect */
@@ -87,26 +102,65 @@
                 opacity: 0;
                 transform: translateX(0) translateY(0) rotate(-45deg);
             }
+
             10% {
                 opacity: 1;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 opacity: 0;
                 transform: translateX(-500px) translateY(500px) rotate(-45deg);
             }
         }
 
-        .meteor:nth-child(1) { top: 10%; left: 20%; animation-duration: 8s; animation-delay: 0s; }
-        .meteor:nth-child(2) { top: 20%; left: 60%; animation-duration: 10s; animation-delay: 2s; }
-        .meteor:nth-child(3) { top: 5%; left: 80%; animation-duration: 9s; animation-delay: 4s; }
-        .meteor:nth-child(4) { top: 15%; left: 40%; animation-duration: 11s; animation-delay: 6s; }
-        .meteor:nth-child(5) { top: 25%; left: 70%; animation-duration: 12s; animation-delay: 3s; }
-        .meteor:nth-child(6) { top: 8%; left: 50%; animation-duration: 10s; animation-delay: 7s; }
+        .meteor:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .meteor:nth-child(2) {
+            top: 20%;
+            left: 60%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        .meteor:nth-child(3) {
+            top: 5%;
+            left: 80%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+
+        .meteor:nth-child(4) {
+            top: 15%;
+            left: 40%;
+            animation-duration: 11s;
+            animation-delay: 6s;
+        }
+
+        .meteor:nth-child(5) {
+            top: 25%;
+            left: 70%;
+            animation-duration: 12s;
+            animation-delay: 3s;
+        }
+
+        .meteor:nth-child(6) {
+            top: 8%;
+            left: 50%;
+            animation-duration: 10s;
+            animation-delay: 7s;
+        }
     </style>
 </head>
+
 <body class="font-sans antialiased selection:bg-brand-orange selection:text-black">
 
     <nav class="fixed w-full z-50 bg-brand-dark/90 backdrop-blur border-b border-white/10">
@@ -119,9 +173,10 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8 font-mono text-sm">
                         <a href="#features" class="hover:text-brand-orange transition-colors">Features</a>
-                        <a href="#architecture" class="hover:text-brand-orange transition-colors">Architecture</a>
+                        <a href="#roadmap" class="hover:text-brand-orange transition-colors">Roadmap</a>
                         <a href="#usecases" class="hover:text-brand-orange transition-colors">Use Cases</a>
-                        <a href="https://github.com/DhananjayPurohit/paygress" target="_blank" class="px-4 py-2 border border-white/20 rounded hover:bg-white/10 transition-colors">
+                        <a href="https://github.com/DhananjayPurohit/paygress" target="_blank"
+                            class="px-4 py-2 border border-white/20 rounded hover:bg-white/10 transition-colors">
                             <i class="fab fa-github"></i> GitHub
                         </a>
                     </div>
@@ -130,8 +185,12 @@
         </div>
     </nav>
 
-    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-24 overflow-hidden bg-grid">
-        <!-- Meteor Shower -->
+    <!-- HERO SECTION with 3D Globe -->
+    <div id="hero" class="relative min-h-screen overflow-hidden bg-[#030303]">
+        <!-- 3D Globe Background - Positioned right -->
+        <div id="globe-container" class="absolute inset-0 w-full h-full"></div>
+
+        <!-- Meteor Shower Animation -->
         <div class="meteor"></div>
         <div class="meteor"></div>
         <div class="meteor"></div>
@@ -139,140 +198,336 @@
         <div class="meteor"></div>
         <div class="meteor"></div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-green/30 bg-brand-green/5 text-brand-green font-mono text-xs mb-8">
-                <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
-                </span>
-                Pay-As-You-Go Compute
-            </div>
+        <!-- Gradient overlays -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#030303] via-transparent to-[#030303] pointer-events-none">
+        </div>
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-[#030303] via-[#030303]/60 to-transparent pointer-events-none">
+        </div>
 
-            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 text-white max-w-4xl">
-                Cloud Compute for <span class="gradient-text">Sats</span>.<br>
-                Zero KYC. Zero Lock-in.
-            </h1>
-            
-            <p class="mt-4 max-w-2xl text-xl text-gray-400">
-                A decentralized network of bare-metal providers. 
-                Deploy VPS instances in seconds. Pay per second via Lightning. 
-                Run autonomous, censorship-resistant infrastructure.
-            </p>
+        <!-- Main Content -->
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center pt-20">
 
-            <!-- <div class="mt-10 flex flex-col sm:flex-row gap-4">
-                <a href="#" class="px-8 py-4 bg-brand-orange text-black font-bold rounded hover:bg-[#ffa73e] transition shadow-[0_0_15px_rgba(247,147,26,0.3)]">
-                    Start Provisioning
-                </a>
-                <a href="#architecture" class="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded hover:bg-white/5 transition">
-                    Read the Docs
-                </a>
-            </div> -->
-
-            <div class="mt-16 w-full max-w-3xl text-left shadow-2xl">
-                <div class="bg-[#1a1a1a] rounded-t-lg p-3 flex items-center gap-2 border border-white/10 border-b-0">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    <div class="ml-2 text-xs text-gray-500 font-mono">user@paygress-cli:~</div>
+            <!-- Hero Text - Left aligned -->
+            <div class="max-w-2xl">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-green/30 bg-brand-green/5 text-brand-green font-mono text-xs mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
+                    </span>
+                    LIVE NETWORK • 1 NODE ONLINE
                 </div>
-                <div class="bg-black/90 backdrop-blur border border-white/10 rounded-b-lg p-6 font-mono text-sm leading-relaxed overflow-hidden">
-                    <div class="text-gray-300">
-                        <span class="text-brand-orange">➜</span> paygress deploy --image nostr-relay:latest --region ap-south
+
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight">
+                    Cloud Compute<br>for <span class="gradient-text">Sats</span>.
+                </h1>
+
+                <p class="text-xl text-gray-400 mb-10 max-w-xl leading-relaxed">
+                    Decentralized bare-metal compute. Deploy VMs & Pods in seconds.
+                    Pay per second via Lightning. <span class="text-white">Zero KYC. Zero Lock-in.</span>
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap gap-4 mb-12">
+                    <a href="https://github.com/DhananjayPurohit/paygress#-cli-tool" target="_blank"
+                        class="px-8 py-4 bg-brand-orange text-black font-bold rounded-lg hover:bg-[#ffb347] transition shadow-[0_0_30px_rgba(247,147,26,0.4)] text-lg">
+                        <i class="fa-solid fa-bolt mr-2"></i>Get Started
+                    </a>
+                    <a href="#how-it-works"
+                        class="px-8 py-4 border border-white/20 text-white font-bold rounded-lg hover:bg-white/5 transition text-lg">
+                        How It Works
+                    </a>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="flex gap-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-brand-orange font-mono">1</div>
+                        <div class="text-xs text-gray-500 mt-1">Active Node</div>
                     </div>
-                    <div class="text-gray-400 mt-2">Finding optimal node... <span class="text-brand-green">Found (latency: 24ms)</span></div>
-                    <div class="text-gray-400">Estimating cost... <span class="text-brand-orange">12 sats/min</span></div>
-                    <div class="text-gray-400 mt-2">
-                        <span>⚡ Invoice generated:</span><br>
-                        <span class="break-all text-xs text-gray-600">lnbc100n1p3...9yq2</span>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-brand-green font-mono">99.9%</div>
+                        <div class="text-xs text-gray-500 mt-1">Uptime</div>
                     </div>
-                    <div class="text-brand-green mt-2">✓ Payment received via Lightning</div>
-                    <div class="text-white mt-2 terminal-cursor">Instance active: 192.168.0.45 [ID: pg-882a]</div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-white font-mono">Ꝏ</div>
+                        <div class="text-xs text-gray-500 mt-1">possibilites</div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- CLI Terminal - Positioned bottom right -->
+        <div class="absolute bottom-24 right-8 lg:right-16 z-20 max-w-md hidden lg:block">
+            <div class="bg-black/70 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                <div class="bg-black/80 px-4 py-2.5 flex items-center gap-2 border-b border-white/10">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-3 text-xs text-gray-400 font-mono">paygress-cli</span>
+                </div>
+                <div class="p-5 font-mono text-sm">
+                    <div class="text-gray-300 mb-4">
+                        <span class="text-brand-green">$</span> paygress spawn --token <span
+                            class="text-brand-orange">cashuBo2F...</span>
+                    </div>
+                    <div class="space-y-1 text-xs">
+                        <div class="text-gray-500"><span class="text-brand-green">✓</span> Token verified: <span
+                                class="text-white">6,000 msats</span></div>
+                        <div class="text-gray-500"><span class="text-brand-green">✓</span> Duration: <span
+                                class="text-white">60 seconds</span></div>
+                        <div class="text-gray-500"><span class="text-brand-green">✓</span> Pod spawned: <span
+                                class="text-white">pod-7f8a2b</span></div>
+                    </div>
+                    <div class="mt-4 p-3 bg-brand-green/10 border border-brand-green/20 rounded-lg">
+                        <div class="text-brand-green font-bold text-xs">🎉 SSH Ready</div>
+                        <div class="text-white text-xs mt-1">ssh user@node.paygress.net -p 32001</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
+            <a href="#features" class="text-gray-500 hover:text-brand-orange transition">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
     </div>
+
 
     <div id="features" class="py-20 bg-brand-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-orange/30 transition duration-300">
-                    <div class="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-6 text-brand-orange">
+                <div
+                    class="p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-orange/30 transition duration-300">
+                    <div
+                        class="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-6 text-brand-orange">
                         <i class="fa-solid fa-stopwatch text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Per-Second Billing</h3>
-                    <p class="text-gray-400">Eliminate waste. Pay only for the exact runtime of your CI/CD pipelines or ephemeral workloads. Settlement via Lightning.</p>
+                    <p class="text-gray-400">Eliminate waste. Pay only for the exact runtime of your CI/CD pipelines or
+                        ephemeral workloads. Settlement via Lightning.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-green/30 transition duration-300">
-                    <div class="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-6 text-brand-green">
+                <div
+                    class="p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-green/30 transition duration-300">
+                    <div
+                        class="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-6 text-brand-green">
                         <i class="fa-solid fa-user-secret text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">No KYC. No Accounts.</h3>
-                    <p class="text-gray-400">Permissionless access. No credit cards or subscriptions required. Just pure, anonymous compute power.</p>
+                    <p class="text-gray-400">Permissionless access. No credit cards or subscriptions required. Just
+                        pure, anonymous compute power.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-orange/30 transition duration-300">
-                    <div class="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-6 text-brand-orange">
+                <div
+                    class="p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-orange/30 transition duration-300">
+                    <div
+                        class="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-6 text-brand-orange">
                         <i class="fa-solid fa-server text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Provider Marketplace</h3>
-                    <p class="text-gray-400">Monetize your bare metal. Install the Paygress Agent and rent out spare capacity to the global network.</p>
+                    <p class="text-gray-400">Monetize your bare metal. Install the Paygress Agent and rent out spare
+                        capacity to the global network.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="architecture" class="py-20 border-t border-white/10 bg-[#0a0a0a]">
+    <!-- How It Works Section -->
+    <div id="how-it-works" class="py-20 border-t border-white/10 bg-[#080808]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white tracking-tight">System Architecture</h2>
-                <p class="mt-4 text-gray-400">A Kubernetes-native control plane orchestrating a global edge network.</p>
+                <h2 class="text-3xl font-bold text-white tracking-tight">How It Works</h2>
+                <p class="mt-4 text-gray-400">Three simple steps to deploy your VM or Pod</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-sm">
-                <div class="group relative p-6 bg-brand-card border border-white/10 rounded-xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition rounded-xl"></div>
-                    <div class="relative">
-                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-cubes"></i> Paygress-Core
-                        </h3>
-                        <p class="text-gray-400 mb-4">K8s Control Plane Management</p>
-                        <ul class="space-y-2 text-gray-500">
-                            <li>• Global Orchestration</li>
-                            <li>• Node Coordination</li>
-                            <li>• State Management</li>
-                        </ul>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-orange/10 rounded-full flex items-center justify-center mb-6 border-2 border-brand-orange">
+                        <span class="text-2xl font-bold text-brand-orange">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Get Lightning Tokens</h3>
+                    <p class="text-gray-400">Pay with Cashu eCash or Lightning invoices. No account or KYC required.</p>
+                    <div
+                        class="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-white/10">
                     </div>
                 </div>
 
-                <div class="group relative p-6 bg-brand-card border border-white/10 rounded-xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-brand-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition rounded-xl"></div>
-                    <div class="relative">
-                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-network-wired"></i> Paygress-Server
-                        </h3>
-                        <p class="text-gray-400 mb-4">The Bridge & Payment Layer</p>
-                        <ul class="space-y-2 text-gray-500">
-                            <li>• L402 / Lightning Payment</li>
-                            <li>• Client-facing APIs</li>
-                            <li>• KubeEdge Integration</li>
-                        </ul>
+                <!-- Step 2 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-green/10 rounded-full flex items-center justify-center mb-6 border-2 border-brand-green">
+                        <span class="text-2xl font-bold text-brand-green">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Run One Command</h3>
+                    <p class="text-gray-400">Use the Paygress CLI with your token. That's literally it.</p>
+                    <code
+                        class="inline-block mt-3 px-3 py-1 bg-black/50 rounded text-brand-orange text-sm font-mono">paygress spawn --token &lt;cashu&gt;</code>
+                    <div
+                        class="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-white/10">
                     </div>
                 </div>
 
-                <div class="group relative p-6 bg-brand-card border border-white/10 rounded-xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-brand-green/10 to-transparent opacity-0 group-hover:opacity-100 transition rounded-xl"></div>
-                    <div class="relative">
-                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-laptop-code"></i> Paygress-Client
-                        </h3>
-                        <p class="text-gray-400 mb-4">Edge Execution</p>
-                        <ul class="space-y-2 text-gray-500">
-                            <li>• Machine Client</li>
-                            <li>• Workload Execution</li>
-                            <li>• Resource Reporting</li>
-                        </ul>
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-orange/10 rounded-full flex items-center justify-center mb-6 border-2 border-brand-orange">
+                        <span class="text-2xl font-bold text-brand-orange">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">SSH In & Build</h3>
+                    <p class="text-gray-400">Get instant SSH access. Run anything. Pay only for what you use.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Section -->
+    <div class="py-20 border-t border-white/10 bg-brand-dark">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white tracking-tight">Why Paygress?</h2>
+                <p class="mt-4 text-gray-400">Your freedom matters. Here's how we compare.</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="py-4 px-4 text-gray-400 font-mono text-sm"></th>
+                            <th class="py-4 px-4 text-brand-orange font-bold">Paygress</th>
+                            <th class="py-4 px-4 text-gray-400">AWS / GCP</th>
+                            <th class="py-4 px-4 text-gray-400">DigitalOcean</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-mono text-sm">
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-4 text-gray-400">KYC Required</td>
+                            <td class="py-4 px-4 text-brand-green"><i class="fa-solid fa-xmark"></i> No</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-check"></i> Yes</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-check"></i> Yes</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-4 text-gray-400">Credit Card</td>
+                            <td class="py-4 px-4 text-brand-green"><i class="fa-solid fa-xmark"></i> No</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-check"></i> Yes</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-check"></i> Yes</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-4 text-gray-400">Billing</td>
+                            <td class="py-4 px-4 text-brand-orange">Per Second</td>
+                            <td class="py-4 px-4 text-gray-500">Per Hour</td>
+                            <td class="py-4 px-4 text-gray-500">Per Hour</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-4 text-gray-400">Payment</td>
+                            <td class="py-4 px-4 text-brand-orange">Lightning / Cashu</td>
+                            <td class="py-4 px-4 text-gray-500">Fiat Only</td>
+                            <td class="py-4 px-4 text-gray-500">Fiat Only</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-4 text-gray-400">Censorship Resistant</td>
+                            <td class="py-4 px-4 text-brand-green"><i class="fa-solid fa-check"></i> Yes</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-xmark"></i> No</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-xmark"></i> No</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 text-gray-400">Decentralized</td>
+                            <td class="py-4 px-4 text-brand-green"><i class="fa-solid fa-check"></i> Yes</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-xmark"></i> No</td>
+                            <td class="py-4 px-4 text-red-400"><i class="fa-solid fa-xmark"></i> No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Roadmap Section -->
+    <div id="roadmap" class="py-20 border-t border-white/10 bg-[#080808]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white tracking-tight">Roadmap</h2>
+                <p class="mt-4 text-gray-400">Where we're headed</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Live -->
+                <div class="flex items-start gap-4 p-6 bg-brand-card border border-brand-green/30 rounded-xl">
+                    <div class="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-check text-brand-green text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h3 class="text-lg font-bold text-white">Kubernetes Pods</h3>
+                            <span
+                                class="px-2 py-0.5 bg-brand-green/20 text-brand-green text-xs font-mono rounded">LIVE</span>
+                        </div>
+                        <p class="text-gray-400">Deploy containerized workloads to K8s clusters. Full SSH access.</p>
                     </div>
                 </div>
+
+                <!-- Coming Soon -->
+                <div class="flex items-start gap-4 p-6 bg-brand-card border border-brand-orange/30 rounded-xl">
+                    <div class="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-rocket text-brand-orange text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h3 class="text-lg font-bold text-white">Proxmox VMs</h3>
+                            <span
+                                class="px-2 py-0.5 bg-brand-orange/20 text-brand-orange text-xs font-mono rounded">COMING
+                                SOON</span>
+                        </div>
+                        <p class="text-gray-400">Full virtual machines on bare metal. More providers, more locations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Planned -->
+                <div class="flex items-start gap-4 p-6 bg-brand-card border border-white/10 rounded-xl">
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-code text-gray-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h3 class="text-lg font-bold text-white">Provider Dashboard</h3>
+                            <span class="px-2 py-0.5 bg-white/10 text-gray-400 text-xs font-mono rounded">PLANNED</span>
+                        </div>
+                        <p class="text-gray-400">Web UI for providers to manage their nodes, view earnings, and
+                            configure pricing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Become a Provider Section -->
+    <div id="providers" class="py-20 border-t border-white/10 bg-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-orange/30 bg-brand-orange/5 text-brand-orange font-mono text-xs mb-6">
+                <i class="fa-solid fa-coins"></i>
+                EARN SATS
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-6">Become a Provider</h2>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Got spare compute? Turn your idle servers into a revenue stream.
+                Join the decentralized cloud and earn Bitcoin for every second of compute you provide.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://github.com/DhananjayPurohit/paygress#-provider-setup" target="_blank"
+                    class="px-8 py-4 bg-brand-orange text-black font-bold rounded-lg hover:bg-[#ffb347] transition shadow-[0_0_20px_rgba(247,147,26,0.3)]">
+                    <i class="fa-solid fa-server mr-2"></i>Setup Guide
+                </a>
+                <a href="https://github.com/DhananjayPurohit/paygress" target="_blank"
+                    class="px-8 py-4 border border-white/20 text-white font-bold rounded-lg hover:bg-white/5 transition">
+                    <i class="fab fa-github mr-2"></i>View on GitHub
+                </a>
             </div>
         </div>
     </div>
@@ -280,27 +535,31 @@
     <div id="usecases" class="py-20 bg-brand-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-white mb-12">Built for the decentralized web</h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="p-6 rounded-lg border border-white/10 hover:bg-white/5 transition">
                     <div class="text-purple-400 text-2xl mb-4"><i class="fa-solid fa-tower-broadcast"></i></div>
                     <h4 class="font-bold text-white">Nostr Relays</h4>
-                    <p class="text-sm text-gray-400 mt-2">Deploy geographically distributed relays instantly to ensure network resilience.</p>
+                    <p class="text-sm text-gray-400 mt-2">Deploy geographically distributed relays instantly to ensure
+                        network resilience.</p>
                 </div>
                 <div class="p-6 rounded-lg border border-white/10 hover:bg-white/5 transition">
                     <div class="text-brand-green text-2xl mb-4"><i class="fa-solid fa-code-branch"></i></div>
                     <h4 class="font-bold text-white">ngit CI/CD</h4>
-                    <p class="text-sm text-gray-400 mt-2">The missing backend for decentralized code. Run builds and tests on-demand for satoshis.</p>
+                    <p class="text-sm text-gray-400 mt-2">The missing backend for decentralized code. Run builds and
+                        tests on-demand for satoshis.</p>
                 </div>
                 <div class="p-6 rounded-lg border border-white/10 hover:bg-white/5 transition">
                     <div class="text-brand-orange text-2xl mb-4"><i class="fa-solid fa-coins"></i></div>
                     <h4 class="font-bold text-white">Cashu Mints</h4>
-                    <p class="text-sm text-gray-400 mt-2">Autonomous, ownerless mints that can migrate between regions to maintain uptime.</p>
+                    <p class="text-sm text-gray-400 mt-2">Autonomous, ownerless mints that can migrate between regions
+                        to maintain uptime.</p>
                 </div>
                 <div class="p-6 rounded-lg border border-white/10 hover:bg-white/5 transition">
                     <div class="text-blue-400 text-2xl mb-4"><i class="fa-solid fa-bolt-lightning"></i></div>
                     <h4 class="font-bold text-white">Lightning Nodes</h4>
-                    <p class="text-sm text-gray-400 mt-2">Spin up ephemeral nodes for routing or liquidity management without hardware costs.</p>
+                    <p class="text-sm text-gray-400 mt-2">Spin up ephemeral nodes for routing or liquidity management
+                        without hardware costs.</p>
                 </div>
             </div>
         </div>
@@ -313,15 +572,81 @@
                 <p class="text-xs text-gray-500 mt-1">Decentralized. Permissionless. Lightning Native.</p>
             </div>
             <div class="flex gap-6">
-                <a href="https://primal.net/p/nprofile1qqs8nnwa2snd3vyhv22z0y4wga7gufkhdyaudzfyat3rpxmexapdy7s7meku7" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+                <a href="https://primal.net/p/nprofile1qqs8nnwa2snd3vyhv22z0y4wga7gufkhdyaudzfyat3rpxmexapdy7s7meku7"
+                    target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
                     <svg width="24" height="24" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="250" cy="250" r="250" fill="#8B5CF6"/>
-                        <path d="M345 180c-8-12-18-22-30-28-15-8-32-10-48-8-20 3-38 12-52 26-8 8-14 18-18 28-3 8-5 17-5 26 0 12 3 24 8 35 6 13 15 24 26 33 15 12 33 20 52 22 8 1 16 0 24-2 10-3 19-8 27-15l-15 85c-2 10-4 20-8 29-4 10-10 19-17 27-10 11-22 19-36 24-12 4-25 6-38 5-15-1-29-5-42-12-15-8-28-19-38-32l25-20c8 10 18 18 30 23 10 5 21 7 32 7 10 0 20-2 29-6 10-5 18-11 24-20 5-7 9-15 11-23 2-7 4-15 5-22l18-102c-12 8-25 13-39 15-16 2-32 0-47-5-17-6-32-16-44-29-13-14-23-31-28-49-4-15-5-31-3-47 3-18 10-35 21-50 12-17 28-30 47-39 16-8 34-12 52-11 16 1 31 6 44 14 11 7 20 16 27 27l8-15h35l-35 195z" fill="white"/>
+                        <circle cx="250" cy="250" r="250" fill="#8B5CF6" />
+                        <path
+                            d="M345 180c-8-12-18-22-30-28-15-8-32-10-48-8-20 3-38 12-52 26-8 8-14 18-18 28-3 8-5 17-5 26 0 12 3 24 8 35 6 13 15 24 26 33 15 12 33 20 52 22 8 1 16 0 24-2 10-3 19-8 27-15l-15 85c-2 10-4 20-8 29-4 10-10 19-17 27-10 11-22 19-36 24-12 4-25 6-38 5-15-1-29-5-42-12-15-8-28-19-38-32l25-20c8 10 18 18 30 23 10 5 21 7 32 7 10 0 20-2 29-6 10-5 18-11 24-20 5-7 9-15 11-23 2-7 4-15 5-22l18-102c-12 8-25 13-39 15-16 2-32 0-47-5-17-6-32-16-44-29-13-14-23-31-28-49-4-15-5-31-3-47 3-18 10-35 21-50 12-17 28-30 47-39 16-8 34-12 52-11 16 1 31 6 44 14 11 7 20 16 27 27l8-15h35l-35 195z"
+                            fill="white" />
                     </svg>
                 </a>
             </div>
         </div>
     </footer>
 
+    <!-- Globe.gl Script -->
+    <script src="https://unpkg.com/globe.gl"></script>
+    <script>
+        // Initialize globe when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('globe-container');
+            if (!container) return;
+
+            // Provider locations
+            const providers = [
+                {
+                    name: 'Node Alpha',
+                    lat: 20.5937,
+                    lng: 78.9629,
+                    status: 'online',
+                    location: 'India',
+                    rate: '100 msats/sec'
+                }
+            ];
+
+            // Create globe
+            const globe = Globe()
+                .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
+                .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+                .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+                .pointsData(providers)
+                .pointLat('lat')
+                .pointLng('lng')
+                .pointColor(() => '#F7931A')
+                .pointAltitude(0.06)
+                .pointRadius(0.8)
+                .pointsMerge(true)
+                .atmosphereColor('#F7931A')
+                .atmosphereAltitude(0.15)
+                (container);
+
+            // Add glowing rings around points
+            globe
+                .ringsData(providers)
+                .ringLat('lat')
+                .ringLng('lng')
+                .ringColor(() => '#F7931A')
+                .ringMaxRadius(3)
+                .ringPropagationSpeed(2)
+                .ringRepeatPeriod(1000);
+
+            // Auto-rotate
+            globe.controls().autoRotate = true;
+            globe.controls().autoRotateSpeed = 0.5;
+            globe.controls().enableZoom = false;
+
+            // Point to India on load
+            globe.pointOfView({ lat: 20, lng: 78, altitude: 2.5 }, 1000);
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                globe.width(container.clientWidth);
+                globe.height(container.clientHeight);
+            });
+        });
+    </script>
+
 </body>
+
 </html>
